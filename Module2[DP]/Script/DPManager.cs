@@ -80,4 +80,19 @@ public class DPManager : MonoBehaviour
     {
         return Mathf.FloorToInt(currentDP);
     }
+
+    public void RefundDP(int amount)
+    {
+        currentDP = Mathf.Clamp(
+            currentDP + amount,
+            0,
+            maxDP
+        );
+
+        OnDPChanged?.Invoke(Mathf.FloorToInt(currentDP));
+
+        Debug.Log(
+            $"Hoàn lại {amount} DP. DP hiện tại: {Mathf.FloorToInt(currentDP)}"
+        );
+    }
 }
