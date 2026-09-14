@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e8218f757ab234fbc3e1357fcb87d4, type: 3}
+  m_Name: SO_Supporter
+  m_EditorClassIdentifier: 
+  operatorName: Agen
+  dpCost: 8
+  redeployCooldown: 15
+  operatorClass: 5
+  allowedTileType: 1
+  operatorPrefab: {fileID: 5794488021206102825, guid: 8586da429fd7a424cbcc11e34456b676, type: 3}
+  icon: {fileID: 0}
+  blockCount: 1
+  relativeAttackRange:
+  - {x: -1, y: 0}
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: -1, y: 1}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
+  - {x: -1, y: 2}
+  - {x: 0, y: 2}
+  - {x: 1, y: 2}
