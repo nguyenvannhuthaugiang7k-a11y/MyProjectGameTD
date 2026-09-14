@@ -6,44 +6,62 @@ public class TileVisual : MonoBehaviour
     [SerializeField] private MeshRenderer meshRenderer;
 
     [Header("Color Settings")]
-    [SerializeField] private Color meleeColor = new Color(0.8f, 0.8f, 0.8f, 0.3f);   // Xám nhạt - Ô đất liền
-    [SerializeField] private Color rangedColor = new Color(0.2f, 0.6f, 1.0f, 0.3f);  // Xanh dương - Ô cao đài
-    [SerializeField] private Color pathColor = new Color(0.9f, 0.3f, 0.2f, 0.3f);    // Đỏ nhạt - Ô kẻ địch đi
-    [SerializeField] private Color hoverColor = new Color(1.0f, 0.9f, 0.2f, 0.6f);   // Vàng - Khi rê chuột qua
+    [SerializeField] private Color meleeColor = new Color(0.8f, 0.8f, 0.8f, 0.3f);
+    [SerializeField] private Color rangedColor = new Color(0.2f, 0.6f, 1.0f, 0.3f);
+    [SerializeField] private Color pathColor = new Color(0.9f, 0.3f, 0.2f, 0.3f);
+    [SerializeField] private Color hoverColor = new Color(1.0f, 0.9f, 0.2f, 0.6f);
 
     public GridNode Node { get; private set; }
+
     private Color originalColor;
 
-    // Khởi tạo Tile với dữ liệu Node
+    // Trạng thái riêng
+    private bool isMouseHovered = false;
+    private bool isRangeHighlighted = false;
+
     public void Setup(GridNode node)
     {
         this.Node = node;
         UpdateVisualByTileType();
     }
 
-    // Cập nhật màu sắc dựa trên TileType
     public void UpdateVisualByTileType()
     {
         switch (Node.tileType)
         {
-            case TileType.Melee:
+            case TileType.LowGround:
                 originalColor = meleeColor;
                 break;
-            case TileType.Ranged:
+
+            case TileType.HighGround:
                 originalColor = rangedColor;
                 break;
-            case TileType.Path:
+
             case TileType.Blocked:
                 originalColor = pathColor;
                 break;
         }
-        SetColor(originalColor);
+
+        UpdateVisual();
     }
 
-    // Đổi màu khi hover chuột
+    // Dùng cho mouse hover
     public void SetHover(bool isHovered)
     {
-        if (isHovered)
+        isMouseHovered = isHovered;
+        UpdateVisual();
+    }
+
+    // Dùng cho range highlight
+    public void SetRangeHighlight(bool isHighlighted)
+    {
+        isRangeHighlighted = isHighlighted;
+        UpdateVisual();
+    }
+
+    private void UpdateVisual()
+    {
+        if (isRangeHighlighted || isMouseHovered)
         {
             SetColor(hoverColor);
         }

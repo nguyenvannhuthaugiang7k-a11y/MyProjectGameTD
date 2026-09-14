@@ -3,10 +3,9 @@
 // Định nghĩa các loại ô trong game phong cách Arknights
 public enum TileType
 {
-    Melee,      // Ô cận chiến (đất liền)
-    Ranged,     // Ô cao đài (bắn xa)
-    Path,       // Ô đường kẻ địch di chuyển (không đặt được nhân vật)
-    Blocked     // Ô vật cản / cấm đặt
+    LowGround,
+    HighGround,
+    Blocked
 }
 
 public class GridNode
@@ -15,6 +14,7 @@ public class GridNode
     public int zIndex;            // Tọa độ Z trong mảng 2D
     public Vector3 worldPosition; // Vị trí thực tế trong không gian 3D Unity
     public TileType tileType;     // Loại ô
+    public bool isEnemyPath;
     public bool isOccupied;       // Trạng thái: đã có nhân vật đặt lên chưa?
 
     // Constructor để khởi tạo dữ liệu cho từng ô
@@ -24,6 +24,7 @@ public class GridNode
         this.zIndex = z;
         this.worldPosition = worldPos;
         this.tileType = type;
+        this.isEnemyPath = false;
         this.isOccupied = false;
     }
 }
