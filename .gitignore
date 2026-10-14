@@ -1,0 +1,16 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]serSettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+.vs/
+.vscode/
+*.csproj
+*.sln
+*.user
+*.suo
+*.tmp
+*.bak
+Assets.zip

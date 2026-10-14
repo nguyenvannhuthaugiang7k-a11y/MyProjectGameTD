@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e8218f757ab234fbc3e1357fcb87d4, type: 3}
+  m_Name: test_DefenderData
+  m_EditorClassIdentifier: 
+  operatorName: Defender
+  dpCost: 12
+  redeployCooldown: 20
+  operatorClass: 1
+  allowedTileType: 0
+  operatorPrefab: {fileID: 1806505503401302289, guid: 264f60cca0a9b9c47813f24f19d02e34, type: 3}
+  icon: {fileID: 0}
+  blockCount: 3
+  maxHealth: 250
+  attackDamage: 20
+  attackInterval: 1.5
+  relativeAttackRange:
+  - {x: 0, y: 0}
+  - {x: 0, y: 1}

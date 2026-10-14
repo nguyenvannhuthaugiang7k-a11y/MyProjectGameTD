@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e8218f757ab234fbc3e1357fcb87d4, type: 3}
+  m_Name: SO_Lyria_Melee
+  m_EditorClassIdentifier: 
+  operatorName: Lyria
+  dpCost: 8
+  redeployCooldown: 15
+  operatorClass: 0
+  allowedTileType: 0
+  operatorPrefab: {fileID: 4456066551100367677, guid: c1d680abc256d4340b6371a1b49ca867, type: 3}
+  icon: {fileID: 21300000, guid: 469f5c19ac3c26c43b230712b225183b, type: 3}
+  blockCount: 2
+  relativeAttackRange:
+  - {x: 0, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: 2}
